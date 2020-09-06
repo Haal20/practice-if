@@ -4,24 +4,21 @@ minButton.addEventListener("click", function () {
   //låter användarens värde sparas i en variable
   let minInput = document.getElementById("myInput").value;
   //converterar sträng variable till int
+  let minInputInt = parseFloat(minInput, 10);
 
-  
-
-
-
-  if (minInput < 18 && minInput > 0) {
+  if (minInputInt < 18 && minInputInt > 0) {
     //Skriv ut att personen är för ung
-    document.getElementById("answer").innerHTML = "<h2>Du är för ung...</h2>"
+    return document.getElementById("answer").textContent = "Du är för ung...";
   }
-  if (minInput >= 18 && minInput >= 65) {
+  if (minInputInt >= 18 && minInputInt >= 65) {
     //Skriv ut att personen har rätt ålder
-    document.getElementById("answer").innerHTML = "<h2>Du har rätt ålder...</h2>"
+    return document.getElementById("answer").textContent = "Du har rätt ålder...";
   }
-  if (minInput > 65) {
+  if (minInputInt > 65) {
     //skriv ut att personen är för gammal
-    document.getElementById("answer").innerHTML = "<h2>Du är för gammal...</h2>"
+    return document.getElementById("answer").textContent = "Du är för gammal...";
   } else {
     //skriv ut att personen endast får skriva sin ålder i siffror
-    document.getElementById("answer").innerHTML = "<h2>Skriv din ålder i siffror tack...</h2>"
+    return document.getElementById("answer").textContent = "Skriv din ålder i siffror tack...";
   }
 });
