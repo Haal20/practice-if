@@ -10,7 +10,7 @@ minButton.addEventListener("click", function () {
     //Skriv ut att personen är för ung
     return document.getElementById("answer").textContent = "Du är för ung...";
   }
-  if (minInput >= 18 && minInput >= 65) {
+  if (minInput >= 18 && minInput <= 65) {
     //Skriv ut att personen har rätt ålder
     return document.getElementById("answer").textContent = "Du har rätt ålder...";
   }
